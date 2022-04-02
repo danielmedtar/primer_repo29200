@@ -1,0 +1,29 @@
+1. Que es git. Controlador de versiones.
+
+2. Consta de 3 estados_
+- Working directory (donde trabajamos)
+- Staging area (donde hicimos cambios)
+- Repositorio (Confirmando todos los cambios que hicimos)
+
+Instalación de MAC PASO A PASO
+1. https://brew.sh/
+
+2. Abrir la terminal
+
+3. Pegar esto en la terminal:
+
+ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+4. Una vez finalizado el proceso, comprobar con comando:
+brew doctor
+
+5. Una vez terminado, escribir: 
+brew install git
+
+6. Comprobar con: git --version
+
+Paso a paso con GIT:
+1. Para inicializar: git init
+2. git status
+3. git add .
+4. git commit -m "mi primer commit con git"
