@@ -80,3 +80,59 @@ a:active{
     background-color:yellow; 
     color:black; 
 }
+
+.card-ejemplo {
+    width: 200px;
+    height: 300px;
+    background-color: yellow;
+}
+
+/* Pseudo clase :not */
+.card-ejemplo:not(:first-of-type) {
+    margin-bottom: 40px;
+}
+
+/* First y last child */
+
+.child p:first-of-type {
+    color: red;
+}
+
+.child p:last-of-type {
+    color: blue;
+}
+
+.child :nth-of-type(3) {
+    background-color: black;
+    color: white;
+}
+
+/* Odd (impar) y el even (par) */
+/* odd = impar */
+.par-impar li:nth-child(odd) {
+    background-color: red;
+    color: yellow;
+}
+
+/* Even = par */
+.par-impar li:nth-child(even) {
+    color: red;
+    background-color: yellow;
+}
+
+.input-filtro {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    display: none;
+}
+
+#opcion1:checked ~ .label1,
+#opcion2:checked ~ .label2,
+#opcion3:checked ~ .label3 {
+    display: block;
+}
