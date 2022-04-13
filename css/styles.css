@@ -51,3 +51,32 @@ img {
     width: 300px;
     margin: 0 auto;
 }
+
+/* Media queries clase 12 */
+.px {
+    font-size: 32px;
+}
+
+.rem {
+    font-size: 2rem;
+}
+
+/* PSEUDO CLASES */
+a:hover {
+    background-color: aqua;
+    padding: 8px;
+}
+
+a:link{ 
+    text-decoration:none; 
+    color:red; 
+}
+
+a:visited{ 
+    color:#999999; 
+}
+
+a:active{ 
+    background-color:yellow; 
+    color:black; 
+}
