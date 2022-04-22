@@ -1,3 +1,157 @@
+@charset "UTF-8";
+/* mixins */
+/* Mixin 1 */
+/* Declarar el mixin con parámetro */
+/* Usar el mixin con parámetro*/
+.contenedor {
+  width: 500px;
+  height: 50px;
+  color: red;
+  margin: 50px;
+}
 
+.card {
+  width: 200px;
+  height: 500px;
+  color: yellow;
+  margin: 100px;
+}
+
+/* Mixin 2 */
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* MAP GET*/
+.box_uno {
+  background-color: rgb(66, 133, 244);
+  width: 25px;
+  /* Ancho de 360*/
+}
+
+.box_dos {
+  background-color: #33D374;
+  width: -25px;
+}
+
+.box_tres {
+  margin: 200px;
+}
+
+/*Extend*/
+.boton, .boton--cancelar, .boton--aceptar {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid black;
+  color: yellow;
+}
+
+.boton--aceptar {
+  background-color: green;
+}
+
+.boton--cancelar {
+  background-color: red;
+}
+
+/* each */
+.mi-color {
+  padding: 100px;
+  color: rgb(66, 133, 244);
+}
+
+.mi-fuente {
+  padding: 100px;
+  color: rgb(66, 133, 244);
+}
+
+.mi-main {
+  padding: 100px;
+  color: rgb(66, 133, 244);
+}
+
+/* each + map */
+/*El mapa se declara con $nombreDelMapa: ()*/
+/* Dentro de los paréntesis lo que necesitemos*/
+/*Creamos el bucle para usar los valores del mapa*/
+.btn--twitter {
+  background-color: #55acee;
+}
+
+.btn--facebook {
+  background-color: #3a5795;
+}
+
+.btn--send-mail {
+  background-color: #C25E30;
+}
+
+div {
+  background-color: #3673D9;
+  text-align: center;
+  padding: 1rem;
+  font-size: 35px;
+}
+
+.claseCualquiera {
+  padding: 1rem;
+  font-size: 35px;
+}
+
+/* Condicionales */
+body h1 {
+  font-size: 34px;
+}
+body h3 {
+  font-size: 25px;
+}
+body p {
+  font-size: 20px;
+}
+
+/* Bucle */
+.li-1 {
+  margin: 10%;
+}
+
+.li-2 {
+  margin: 20%;
+}
+
+.li-3 {
+  margin: 30%;
+}
+
+.li-4 {
+  margin: 40%;
+}
+
+.li-5 {
+  margin: 50%;
+}
+
+.li-6 {
+  margin: 60%;
+}
+
+.li-7 {
+  margin: 70%;
+}
+
+.li-8 {
+  margin: 80%;
+}
+
+.li-9 {
+  margin: 90%;
+}
+
+.li-10 {
+  margin: 100%;
+}
 
 /*# sourceMappingURL=styles.css.map */

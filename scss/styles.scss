@@ -1,0 +1,132 @@
+@import "mixins";
+
+$separaciones: 100px;
+$blue: rgb(66, 133, 244);
+$green: #33D374;
+
+// Paleta de colores
+$colores-contenedores: red;
+$colores-parrafos: blue;
+
+/* MAP GET*/
+$estilos: (
+  color: #3673D9,
+  centro: center,
+  tFuente: 35px,
+  espaciado: 1rem
+);
+
+.box_uno {
+    background-color: $blue;
+    width: calc($separaciones / 4); /* Ancho de 360*/
+}
+.box_dos {
+    background-color: $green;
+    width: calc($separaciones/4)-50;
+}
+
+.box_tres {
+    margin: calc($separaciones * 2);
+}
+
+/*Extend*/
+.boton {
+	width:200px;
+	height:50px;
+	text-align: center;
+	border-radius:20px;
+	border: 1px solid black;
+    color:yellow;
+}
+
+.boton--aceptar{
+    @extend .boton;
+	background-color:green;
+
+}
+
+.boton--cancelar{
+	@extend .boton;
+	background-color:red;
+}
+
+/* each */
+@each $contenedores in mi-color, mi-fuente, mi-main {
+    .#{$contenedores} {
+	    padding: #{$separaciones};
+        color: #{$blue};
+	}
+}
+
+/* each + map */
+/*El mapa se declara con $nombreDelMapa: ()*/
+/* Dentro de los paréntesis lo que necesitemos*/
+$redesSociales: ( /*Declaramos nuestro mapa*/
+        twitter: #55acee,
+        facebook:  #3a5795,
+        send-mail: #C25E30
+); 
+
+/*Creamos el bucle para usar los valores del mapa*/
+@each $colorCualquiera, $teclaCualquiera  in $redesSociales {
+   .btn--#{$colorCualquiera} {
+       background-color: $teclaCualquiera;
+   }
+}
+
+div {
+  background-color: map-get($estilos, color);
+  text-align: map-get($estilos, centro);
+  padding: map-get($estilos, espaciado);
+  font-size:map-get($estilos, tFuente);
+}
+
+.claseCualquiera {
+    padding: map-get($estilos, espaciado);
+    font-size:map-get($estilos, tFuente);
+}
+
+/* Condicionales */
+$vista: tablet;
+$h1Mobile: 30px;
+$parrafoMobile: 18px;
+
+$parrafoDesktop: 25px;
+$h1Desktop: 40px;
+
+body{
+@if $vista == desktop {
+	@media only screen and (min-width:1024px){
+		h1{font-size:$h1Desktop;}
+		h3{font-size:35px;}
+		p{font-size:$parrafoDesktop;}
+		}
+	} @else if $vista == mobile {
+		@media only screen and (max-width:767px){
+			h1{font-size:$h1Mobile;}
+			h3{font-size:25px;}
+			p{font-size:$parrafoMobile;}
+		}
+	} @else {
+		h1{font-size:34px;}
+		h3{font-size:25px;}
+		p{font-size:20px;}
+	}
+}
+
+/* Bucle */
+@for $i from 1 through 10 {
+	.li-#{$i}{
+	    margin: 10% * $i;
+	}
+}
+
+
+
+
+
+
+
+
+
+ 

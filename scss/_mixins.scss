@@ -1,0 +1,34 @@
+/* mixins */
+/* Mixin 1 */
+/* Declarar el mixin con parámetro */
+@mixin tamanio($width, $height, $color, $margen) {
+    width: $width;
+    height: $height;
+    color: $color;
+    margin: $margen;
+ }
+
+ /* Usar el mixin con parámetro*/
+ .contenedor {
+    @include tamanio(500px, 50px, red, 50px);
+ }
+
+ .card {
+    @include tamanio(200px, 500px, yellow, 100px);
+ }
+
+ /* Mixin 2 */
+ @mixin flex-row-center {
+	display: flex;
+	flex-direction:row;
+	justify-content:center;
+}
+
+ @mixin flex-column-center {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+}
+.box {
+   @include flex-row-center;
+}
